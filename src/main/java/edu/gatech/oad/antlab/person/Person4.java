@@ -49,10 +49,5 @@ public class Person4 {
       return name + calc(input);
     }
 
-    public static void main(String[] args) {
-        Person4 a = new Person4("abcdef12345");
-        System.out.println(a);
-    }
-
 }
 
