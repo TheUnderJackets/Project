@@ -1,2 +1,3 @@
 #Files that we don't want commited.
 *.class
+*.DS_Store
