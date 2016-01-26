@@ -30,8 +30,11 @@ public class Person4 {
      * @return the modified string
      */
     private String calc(String input) {
-      //Person 4 put your implementation here
-      return null;
+        String mod = "";
+      for (int i = 0; i < input.length(); i++) {
+        mod += Character.toString(((char) (input.charAt(i) + 1)));
+      }
+      return mod;
     }
     
     /**
@@ -44,6 +47,11 @@ public class Person4 {
      */
     public String toString(String input) {
       return name + calc(input);
+    }
+
+    public static void main(String[] args) {
+        Person4 a = new Person4("abcdef12345");
+        System.out.println(a);
     }
 
 }
