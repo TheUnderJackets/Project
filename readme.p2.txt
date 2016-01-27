@@ -1,3 +1,3 @@
 Person 2
-Hudson Lynam
+Name: Hudson Lynam
 Email: hudsonlynam@gatech.edu
