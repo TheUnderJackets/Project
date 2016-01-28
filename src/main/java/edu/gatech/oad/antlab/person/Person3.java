@@ -1,4 +1,6 @@
+
 package edu.gatech.oad.antlab.person;
+
 /**
  *  A simple class for person 3
  *  returns their name and a
@@ -13,7 +15,7 @@ public class Person3 {
 	
 	/**
 	 * The constructor, takes in the persons
-	 * name
+	 * namejavac
 	 * @param pname the person's real name
 	 */
 	public Person3(String pname){
@@ -31,7 +33,12 @@ public class Person3 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
-	
+	/*public static void main(String args[]) {
+		String word = "gtg123b";
+		String reverse = "";
+		reverse.toString(word);
+		System.out.printf("Original: %s, Reverse %s %n", word, reverse);
+	}*/
 	/**
 	 * This method should take the string
 	 * input and return its reverse.
@@ -42,7 +49,13 @@ public class Person3 {
 	 * @return the reversed string
 	 */
 	private String calc(String input) {
-	  //Person 3 put your implementation here
-	  return null;
+	  if (input == null || input.isEmpty()){
+		return input;
+	  }
+	  String output = "";
+	  for (int i = input.length() -1; i >= 0; i--) {
+		output = output + input.charAt(i);
+	  }
+	  return output;
 	}
 }
