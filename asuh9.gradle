@@ -1,0 +1,29 @@
+//Setting default tasks
+defaultTasks 'jar'
+
+//Importing Plugins
+apply plugin: 'java'
+apply plugin: 'application'
+//Defining Variables
+version = '1.0'
+mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+//Defining the contents of the jar file
+jar {
+    manifest {
+        attributes  'Implementation-Title' : 'M2 Gradle Build',
+                    'Implementation-Version' : version,
+                    'Main-Class' : mainClassName,
+                    'Class-Path' : '../../lib/resources.jar'
+    }
+    archiveName = 'asuh9.jar'
+}
+
+//Downloaded libraries location
+repositories {
+    mavenCentral()
+}
