@@ -1,0 +1,31 @@
+//Set default tasks
+defaultTasks 'jar'
+
+//Import java related tasks and plugins
+apply plugin: 'java'
+apply plugin: 'application'
+
+//Set up variables or properties
+version = '1.0'
+mainClassName = 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+
+//Add dependencies
+dependencies {
+	compile files('lib/resources.jar')
+}
+
+//Define contents of jar file
+jar {
+	manifest {
+		attributes 'Implementation-Title' : 'M2 Gradle Build',
+                    'Implementation-Version' : version,
+                    'Main-Class' : mainClassName,
+                    'Class-Path' : '../../lib/resources.jar'
+	}
+	archiveName = 'wchristian6.jar'
+}
+
+//Add external dependencies
+repositories {
+	mavenCentral()
+}
